@@ -7,7 +7,7 @@ const PATH = {
     SIGNUP:"/signup"
 };
 
-const baseUrl = "https://localhost:7009/api/";
+const baseUrl = "https://emsbe.azurewebsites.net/api/";
 const APP_SETTINGS = {
     API_PATH: {
         Employee: {

@@ -146,18 +146,15 @@ function GetFilterRecord(search) {
                                                     <td>{item.department}</td>
                                                     <td>{item.dateOfBirth}</td>
                                                     <td> 
+                                        
                                                 <button className="btn btn-sm btn btn-primary" data-for="Edit" data-tip="Edit" onClick={() => editEmployee(item.id)} data-iscapture="true" ><FaEdit />
                                                  </button> 
-                                                       
-                                   { employee
-                                        &&
-                                        employee.deleteLoading === true
-                                        ?
-                                        <Loader />
-                                        :  <button className="btn btn-sm btn btn-danger" data-for="Trash" data-tip="Delete" onClick={() => deleteEmployee(item.id)} data-iscapture="true" ><FaTrash />
-                                        </button>
+                                                 
+                                           <button className="btn btn-sm btn btn-danger" data-for="Trash" data-tip="Delete" onClick={() => deleteEmployee(item.id)} data-iscapture="true" ><FaTrash />
+                                             </button>
+                                             
                                                       
-                                   } 
+                                   
                                    </td>
                                                 </tr>
                                             );
