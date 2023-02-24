@@ -163,7 +163,6 @@ export const employeeReducer = (state = INITIAL_STATE, action) => {
                         }
                     case EMPLOYEE_REQUEST.EMPLOYEE_DELETE_SUCCESS:
                         let allemplist = state.getall;
-                        console.log("state.getall",action.payload)
                         for (let i = 0; i < allemplist.length; i++) {
                           if (allemplist[i].id === action.payload) {
                             allemplist.splice(i, 1);

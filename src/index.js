@@ -12,9 +12,6 @@ import './index.css';
 import "./App.css";
 import 'react-toastify/dist/ReactToastify.css';
 
-if (process.env.NODE_ENV === 'production') {
-  console.log = function () { };
-}
 ReactDOM.render(
     <React.StrictMode>
       <CookiesProvider>

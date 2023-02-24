@@ -6,7 +6,6 @@ export function registerEmployee(employeeData,Notificiation) {
         dispatch(request(EMPLOYEE_REQUEST.EMPLOYEE_REGISTER_REQUEST));
         employeeRegister(employeeData).then(
             response => {
-                console.log("log from action",response)
                 if (response.status === 200) {
                      dispatch(success(EMPLOYEE_REQUEST.EMPLOYEE_REGISTER_SUCCESS, response.data))
                      Notificiation("Employee Added Successfully", "success")
@@ -46,7 +45,6 @@ export function deleteEmployeeRecord(id,Notificiation) {
         dispatch(request(EMPLOYEE_REQUEST.EMPLOYEE_DELETE_REQUEST));
         deleteEmployee(id).then(
             response => {
-                console.log("log from action",response)
                 if (response.status === 200) {
                      dispatch(success(EMPLOYEE_REQUEST.EMPLOYEE_DELETE_SUCCESS, id))
                      Notificiation("Employee Deleted Successfully", "success")
@@ -85,7 +83,6 @@ export function getAllEmployees(search) {
         dispatch(request(EMPLOYEE_REQUEST.EMPLOYEE_GET_ALL_REQUEST));
         getAllEmployee(search).then(
             response => {
-                console.log("log from action",response)
                 if (response.status === 200) {
                      dispatch(success(EMPLOYEE_REQUEST.EMPLOYEE_GET_ALL_SUCCESS, response.data))
                 }
